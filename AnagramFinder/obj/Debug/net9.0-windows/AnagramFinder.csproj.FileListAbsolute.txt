@@ -1,0 +1,17 @@
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\bin\Debug\net9.0-windows\AnagramFinder.exe
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\bin\Debug\net9.0-windows\AnagramFinder.deps.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\bin\Debug\net9.0-windows\AnagramFinder.runtimeconfig.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\bin\Debug\net9.0-windows\AnagramFinder.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\bin\Debug\net9.0-windows\AnagramFinder.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.Form1.resources
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.Properties.Resources.resources
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.csproj.GenerateResource.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.AssemblyInfoInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.AssemblyInfo.cs
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.csproj.CoreCompileInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\refint\AnagramFinder.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\AnagramFinder.genruntimeconfig.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 1\AnagramFinder\obj\Debug\net9.0-windows\ref\AnagramFinder.dll
