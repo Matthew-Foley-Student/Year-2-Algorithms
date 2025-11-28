@@ -1,0 +1,16 @@
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\bin\Debug\net9.0-windows\TowereOfHanoi.exe
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\bin\Debug\net9.0-windows\TowereOfHanoi.deps.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\bin\Debug\net9.0-windows\TowereOfHanoi.runtimeconfig.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\bin\Debug\net9.0-windows\TowereOfHanoi.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\bin\Debug\net9.0-windows\TowereOfHanoi.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\TowereOfHanoi.Form1.resources
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\TowereOfHanoi.csproj.GenerateResource.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\TowereOfHanoi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\TowereOfHanoi.AssemblyInfoInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\TowereOfHanoi.AssemblyInfo.cs
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\TowereOfHanoi.csproj.CoreCompileInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\TowereOfHanoi.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\refint\TowereOfHanoi.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\TowereOfHanoi.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\TowereOfHanoi.genruntimeconfig.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 2\TowereOfHanoi\obj\Debug\net9.0-windows\ref\TowereOfHanoi.dll
