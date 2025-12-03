@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SplooshKaboom/1.0.0": {
+        "dependencies": {
+          "BattleShipLibrary": "1.0.0"
+        },
+        "runtime": {
+          "SplooshKaboom.dll": {}
+        }
+      },
+      "BattleShipLibrary/1.0.0": {
+        "runtime": {
+          "BattleShipLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SplooshKaboom/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BattleShipLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

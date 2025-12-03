@@ -1,0 +1,11 @@
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\bin\Debug\net9.0\BattleShipLibrary.deps.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\bin\Debug\net9.0\BattleShipLibrary.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\bin\Debug\net9.0\BattleShipLibrary.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\obj\Debug\net9.0\BattleShipLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\obj\Debug\net9.0\BattleShipLibrary.AssemblyInfoInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\obj\Debug\net9.0\BattleShipLibrary.AssemblyInfo.cs
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\obj\Debug\net9.0\BattleShipLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\obj\Debug\net9.0\BattleShipLibrary.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\obj\Debug\net9.0\refint\BattleShipLibrary.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\obj\Debug\net9.0\BattleShipLibrary.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 3\SplooshKaboom-branch1\SplooshKaboom-branch1\Week 3\BattleShipLibrary\obj\Debug\net9.0\ref\BattleShipLibrary.dll
