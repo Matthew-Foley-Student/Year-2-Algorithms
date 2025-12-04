@@ -29,72 +29,85 @@
         private void InitializeComponent()
         {
             pnlBoard = new Panel();
-            lblSub = new Label();
-            lblDestroy = new Label();
-            lblCruiser = new Label();
-            lblExplination = new Label();
+            lblShipType = new Label();
+            btnRotateShip = new Button();
+            lblConfirm = new Button();
+            btnPlay = new Button();
+            btnReset = new Button();
             SuspendLayout();
             // 
             // pnlBoard
             // 
             pnlBoard.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pnlBoard.Location = new Point(88, 82);
+            pnlBoard.Location = new Point(149, 61);
             pnlBoard.Name = "pnlBoard";
-            pnlBoard.Size = new Size(700, 700);
+            pnlBoard.Size = new Size(600, 600);
             pnlBoard.TabIndex = 1;
             // 
-            // lblSub
+            // lblShipType
             // 
-            lblSub.Anchor = AnchorStyles.Left;
-            lblSub.AutoSize = true;
-            lblSub.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSub.Location = new Point(12, 12);
-            lblSub.Name = "lblSub";
-            lblSub.Size = new Size(144, 37);
-            lblSub.TabIndex = 2;
-            lblSub.Text = "Submarine";
+            lblShipType.AutoSize = true;
+            lblShipType.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblShipType.Location = new Point(394, 9);
+            lblShipType.Name = "lblShipType";
+            lblShipType.Size = new Size(76, 32);
+            lblShipType.TabIndex = 2;
+            lblShipType.Text = "label1";
             // 
-            // lblDestroy
+            // btnRotateShip
             // 
-            lblDestroy.Anchor = AnchorStyles.Right;
-            lblDestroy.AutoSize = true;
-            lblDestroy.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDestroy.Location = new Point(740, 12);
-            lblDestroy.Name = "lblDestroy";
-            lblDestroy.Size = new Size(131, 37);
-            lblDestroy.TabIndex = 3;
-            lblDestroy.Text = "Destroyer";
+            btnRotateShip.Font = new Font("Segoe UI", 12F);
+            btnRotateShip.Location = new Point(211, 667);
+            btnRotateShip.Name = "btnRotateShip";
+            btnRotateShip.Size = new Size(106, 32);
+            btnRotateShip.TabIndex = 3;
+            btnRotateShip.Text = "Rotate Ship";
+            btnRotateShip.UseVisualStyleBackColor = true;
+            btnRotateShip.Click += btnRotateShip_ClickEH;
             // 
-            // lblCruiser
+            // lblConfirm
             // 
-            lblCruiser.AutoSize = true;
-            lblCruiser.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCruiser.Location = new Point(389, 12);
-            lblCruiser.Name = "lblCruiser";
-            lblCruiser.Size = new Size(99, 37);
-            lblCruiser.TabIndex = 4;
-            lblCruiser.Text = "Cruiser";
+            lblConfirm.Font = new Font("Segoe UI", 12F);
+            lblConfirm.Location = new Point(534, 667);
+            lblConfirm.Name = "lblConfirm";
+            lblConfirm.Size = new Size(159, 32);
+            lblConfirm.TabIndex = 4;
+            lblConfirm.Text = "Confirm Placement";
+            lblConfirm.UseVisualStyleBackColor = true;
+            lblConfirm.Click += btnConfirm_ClickEH;
             // 
-            // lblExplination
+            // btnPlay
             // 
-            lblExplination.Anchor = AnchorStyles.Top;
-            lblExplination.AutoSize = true;
-            lblExplination.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblExplination.Location = new Point(270, 16);
-            lblExplination.Name = "lblExplination";
-            lblExplination.Size = new Size(318, 63);
-            lblExplination.TabIndex = 5;
-            lblExplination.Text = "Left click a square to attempt to place a ship\r\nMiddle click to change its rotation\r\nRight click to display the ship but not place it";
+            btnPlay.Font = new Font("Segoe UI", 12F);
+            btnPlay.Location = new Point(394, 731);
+            btnPlay.Name = "btnPlay";
+            btnPlay.Size = new Size(75, 37);
+            btnPlay.TabIndex = 5;
+            btnPlay.Text = "Play";
+            btnPlay.UseVisualStyleBackColor = true;
+            btnPlay.Click += btnPlay_ClickEH;
+            // 
+            // btnReset
+            // 
+            btnReset.Font = new Font("Segoe UI", 12F);
+            btnReset.Location = new Point(395, 667);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 32);
+            btnReset.TabIndex = 6;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_ClickEH;
             // 
             // frmPlayerForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(883, 794);
-            Controls.Add(lblExplination);
-            Controls.Add(lblCruiser);
-            Controls.Add(lblDestroy);
-            Controls.Add(lblSub);
+            Controls.Add(btnReset);
+            Controls.Add(btnPlay);
+            Controls.Add(lblConfirm);
+            Controls.Add(btnRotateShip);
+            Controls.Add(lblShipType);
             Controls.Add(pnlBoard);
             Name = "frmPlayerForm";
             Text = "Form1";
@@ -105,9 +118,10 @@
 
         #endregion
         private Panel pnlBoard;
-        private Label lblSub;
-        private Label lblDestroy;
-        private Label lblCruiser;
-        private Label lblExplination;
+        private Label lblShipType;
+        private Button btnRotateShip;
+        private Button lblConfirm;
+        private Button btnPlay;
+        private Button btnReset;
     }
 }

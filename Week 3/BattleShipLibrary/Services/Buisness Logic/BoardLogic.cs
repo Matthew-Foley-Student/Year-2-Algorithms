@@ -23,6 +23,14 @@ namespace BattleShipLibrary.Services.Buisness_Logic
             bool IsColumnSafe = col >= 0 && col < size;
             return IsRowSafe && IsColumnSafe;
         }
+
+        private bool CanMarkCell(BoardModel board, int row, int col)
+        {
+            return IsOnBoard(board, row, col)
+                && board.Grid[row, col].ShipType == ""
+                && !board.Grid[row, col].Ship;
+        }
+
         public BoardModel MarkLegalLocation(BoardModel board, CellModel currentCell, string shipName)
         {
             switch (shipName.ToLower())
@@ -85,139 +93,118 @@ namespace BattleShipLibrary.Services.Buisness_Logic
 
         private BoardModel AttemptPlaceSubmarineUpLeft(BoardModel board, CellModel currentCell)
         {
-            int SubCheck = 0;
-            int[] SubRow = {0,-1,-2};
-            int[] SubCol = {0, 1, 2};
-            for (int i = 0; i < SubRow.Length; i++)
+            int ok = 0;
+            int[] dR = { 0, -1, -2 };
+            int[] dC = { 0, 1, 2 };
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                if (IsOnBoard(board, currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType == "")
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
                 {
-                    board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType = "Sul";
-                    SubCheck++;
+                    board.Grid[r, c].ShipType = "Sul";
+                    ok++;
                 }
             }
-            if (SubCheck == 3)
+            if (ok == 3) return board;
+
+            // revert partial marks
+            for (int i = 0; i < dR.Length; i++)
             {
-                return board;
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "Sul")
+                    board.Grid[r, c].ShipType = "";
             }
-            else
-            {
-                for (int i = 0; i < SubRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType == "Sul")
-                    {
-                        board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType = "";
-                    }
-                }
-                SubCheck = 0;
-                return board;
-            }
+            return board;
         }
+
+
         private BoardModel AttemptPlaceSubmarineUpRight(BoardModel board, CellModel currentCell)
         {
-            int SubCheck = 0;
-            int[] SubRow = { 0, 1, 2 };
-            int[] SubCol = { 0, 1, 2 };
-            for (int i = 0; i < SubRow.Length; i++)
+
+            int ok = 0;
+            int[] dR = { 0, 1, 2 };
+            int[] dC = { 0, 1, 2 };
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                if (IsOnBoard(board, currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType == "")
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
                 {
-                    board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType = "Sur";
-                    SubCheck++;
+                    board.Grid[r, c].ShipType = "Sur";
+                    ok++;
                 }
             }
-            if (SubCheck == 3)
+            if (ok == 3) return board;
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                return board;
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "Sur")
+                    board.Grid[r, c].ShipType = "";
             }
-            else
-            {
-                for (int i = 0; i < SubRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType == "Sur")
-                    {
-                        board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType = "";
-                    }
-                }
-                SubCheck = 0;
-                return board;
-            }
+            return board;
         }
+
         private BoardModel AttemptPlaceSubmarineDownLeft(BoardModel board, CellModel currentCell)
         {
-            int SubCheck = 0;
-            int[] SubRow = { 0, -1, -2 };
-            int[] SubCol = { 0, -1, 2 };
-            for (int i = 0; i < SubRow.Length; i++)
+            int ok = 0;
+            int[] dR = { 0, -1, -2 };
+            int[] dC = { 0, -1, 2 };
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                if (IsOnBoard(board, currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType == "")
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
                 {
-                    board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType = "Sdl";
-                    SubCheck++;
+                    board.Grid[r, c].ShipType = "Sdl";
+                    ok++;
                 }
             }
-            if (SubCheck == 3)
+            if (ok == 3) return board;
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                return board;
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "Sdl")
+                    board.Grid[r, c].ShipType = "";
             }
-            else
-            {
-                for (int i = 0; i < SubRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType == "Sdl")
-                    {
-                        board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType = "";
-                    }
-                }
-                SubCheck = 0;
-                return board;
-            }
+            return board;
         }
+
+
         private BoardModel AttemptPlaceSubmarineDownRight(BoardModel board, CellModel currentCell)
         {
-            int SubCheck = 0;
-            int[] SubRow = { 0,  1,  2 };
-            int[] SubCol = { 0, -1, -2 };
-            for (int i = 0; i < SubRow.Length; i++)
+            int ok = 0;
+            int[] dR = { 0, 1, 2 };
+            int[] dC = { 0, -1, -2 };
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                if (IsOnBoard(board, currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType == "")
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
                 {
-                    board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType = "Sdr";
-                    SubCheck++;
+                    board.Grid[r, c].ShipType = "Sdr";
+                    ok++;
                 }
             }
-            if (SubCheck == 3)
+            if (ok == 3) return board;
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                return board;
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "Sdr")
+                    board.Grid[r, c].ShipType = "";
             }
-            else
-            {
-                for (int i = 0; i < SubRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType == "Sdr")
-                    {
-                        board.Grid[currentCell.Row + SubRow[i], currentCell.Collumn + SubCol[i]].ShipType = "";
-                    }
-                }
-                SubCheck = 0;
-                return board;
-            }
+            return board;
         }
 
 
@@ -226,283 +213,231 @@ namespace BattleShipLibrary.Services.Buisness_Logic
         //--------------------------------------------------------------------------------------------------------------------------------
         private BoardModel AttemptPlaceDestroyerUpRight(BoardModel board, CellModel currentCell)
         {
-            int destroyCheck = 0;
-            int[] destroyerRow = { 0, 1, 1, 0 };
-            int[] destroyerCol = { 0, 0, 1, 1 };
-            for (int i = 0; i < destroyerRow.Length; i++)
+            int ok = 0;
+            int[] dR = { 0, 1, 1, 0 };
+            int[] dC = { 0, 0, 1, 1 };
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                if (IsOnBoard(board, currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType == "")
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
                 {
-                    board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType = "D";
-                    destroyCheck++;
+                    board.Grid[r, c].ShipType = "D";
+                    ok++;
                 }
             }
-            if (destroyCheck == 4)
+            if (ok == 4) return board;
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                return board;
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "D")
+                    board.Grid[r, c].ShipType = "";
             }
-            else
-            {
-                for (int i = 0; i < destroyerRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType == "D")
-                    {
-                        board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType = "";
-                    }
-                }
-                destroyCheck = 0;
-                return board;
-            }
-        }
-        private BoardModel AttemptPlaceDestroyerDownLeft(BoardModel board, CellModel currentCell)
-        {
-            int destroyCheck = 0;
-            int[] destroyerRow = { 0, -1, -1, 0 };
-            int[] destroyerCol = { 0, 0, -1, -1 };
-            for (int i = 0; i < destroyerRow.Length; i++)
-            {
-                if (IsOnBoard(board, currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType == "")
-                {
-                    board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType = "D";
-                    destroyCheck++;
-                }
-            }
-            if (destroyCheck == 4)
-            {
-                return board;
-            }
-            else
-            {
-                for (int i = 0; i < destroyerRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType == "D")
-                    {
-                        board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType = "";
-                    }
-                }
-                destroyCheck = 0;
-                return board;
-            }
-        }
-        private BoardModel AttemptPlaceDestroyerDownRight(BoardModel board, CellModel currentCell)
-        {
-            int destroyCheck = 0;
-            int[] destroyerRow = { 0, 1, 1, 0 };
-            int[] destroyerCol = { 0, 0, -1, -1 };
-            for (int i = 0; i < destroyerRow.Length; i++)
-            {
-                if (IsOnBoard(board, currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType == "")
-                {
-                    board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType = "Ddr";
-                    destroyCheck++;
-                }
-            }
-            if (destroyCheck == 4)
-            {
-                return board;
-            }
-            else
-            {
-                for (int i = 0; i < destroyerRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType == "D")
-                    {
-                        board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType = "";
-                    }
-                }
-                destroyCheck = 0;
-                return board;
-            }
-        }
-        private BoardModel AttemptPlaceDestroyerUpLeft(BoardModel board, CellModel currentCell)
-        {
-                int destroyCheck = 0;
-                int[] destroyerRow = { 0, -1, -1, 0 };
-                int[] destroyerCol = { 0, 0, 1, 1 };
-                for (int i = 0; i < destroyerRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType == "")
-                    {
-                        board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType = "D";
-                        destroyCheck++;
-                    }
-                }
-                if (destroyCheck == 4)
-                {
-                    return board;
-                }
-                else
-                {
-                    for (int i = 0; i < destroyerRow.Length; i++)
-                    {
-                        if (IsOnBoard(board, currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType == "D")
-                        {
-                            board.Grid[currentCell.Row + destroyerRow[i], currentCell.Collumn + destroyerCol[i]].ShipType = "";
-                        }
-                    }
-                    destroyCheck = 0;
-                    return board;            
-            }
+            return board;
+
         }
 
+        private BoardModel AttemptPlaceDestroyerDownLeft(BoardModel board, CellModel currentCell)
+        {
+
+            int ok = 0;
+            int[] dR = { 0, -1, -1, 0 };
+            int[] dC = { 0, 0, -1, -1 };
+
+            for (int i = 0; i < dR.Length; i++)
+            {
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
+                {
+                    board.Grid[r, c].ShipType = "D";
+                    ok++;
+                }
+            }
+            if (ok == 4) return board;
+
+            for (int i = 0; i < dR.Length; i++)
+            {
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "D")
+                    board.Grid[r, c].ShipType = "";
+            }
+            return board;
+        }
+
+        private BoardModel AttemptPlaceDestroyerDownRight(BoardModel board, CellModel currentCell)
+        {
+            int ok = 0;
+            int[] dR = { 0, 1, 1, 0 };
+            int[] dC = { 0, 0, -1, -1 };
+
+            for (int i = 0; i < dR.Length; i++)
+            {
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
+                {
+                    board.Grid[r, c].ShipType = "D"; // <- keep "D" (not "Ddr")
+                    ok++;
+                }
+            }
+            if (ok == 4) return board;
+
+            for (int i = 0; i < dR.Length; i++)
+            {
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "D")
+                    board.Grid[r, c].ShipType = "";
+            }
+            return board;
+        }
+
+        private BoardModel AttemptPlaceDestroyerUpLeft(BoardModel board, CellModel currentCell)
+        {
+            int ok = 0;
+            int[] dR = { 0, -1, -1, 0 };
+            int[] dC = { 0, 0, 1, 1 };
+
+            for (int i = 0; i < dR.Length; i++)
+            {
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
+                {
+                    board.Grid[r, c].ShipType = "D";
+                    ok++;
+                }
+            }
+            if (ok == 4) return board;
+
+            for (int i = 0; i < dR.Length; i++)
+            {
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "D")
+                    board.Grid[r, c].ShipType = "";
+            }
+            return board;
+        }
 
         //--------------------------------------------------------------------------------------------------------------------------------
         //The 4 methods for the Cruiser (3 long horizontal)
         //--------------------------------------------------------------------------------------------------------------------------------
         private BoardModel AttemptPlaceCruiserUpLeft(BoardModel board, CellModel currentCell)
         {
-            int CruiserCheck = 0;
-            int[] CruiserRow = {0,1,2};
-            int[] CruiserCol = {0,0,0};
-            for (int i = 0; i < CruiserRow.Length; i++)
+            int ok = 0;
+            int[] dR = { 0, 1, 2 };
+            int[] dC = { 0, 0, 0 };
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                if (IsOnBoard(board, currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn 
-                    + CruiserCol[i]].ShipType == "")
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
                 {
-                    board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType = "C";
-                    CruiserCheck++;
+                    board.Grid[r, c].ShipType = "C";
+                    ok++;
                 }
             }
-            if (CruiserCheck == 3)
+            if (ok == 3) return board;
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                return board;
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "C")
+                    board.Grid[r, c].ShipType = "";
             }
-            else
-            {
-                for (int i = 0; i < CruiserRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType == "C")
-                    {
-                        board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType = "";
-                    }
-                }
-                CruiserCheck = 0;
-                return board;
-            }
+            return board;
         }
+
         private BoardModel AttemptPlaceCruiserUpRight(BoardModel board, CellModel currentCell)
         {
-            int CruiserCheck = 0;
-            int[] CruiserRow = { 0, 0, 0 };
-            int[] CruiserCol = { 0, 1, 2 };
-            for (int i = 0; i < CruiserRow.Length; i++)
+            int ok = 0;
+            int[] dR = { 0, 0, 0 };
+            int[] dC = { 0, 1, 2 };
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                if (IsOnBoard(board, currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType == "")
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
                 {
-                    board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType = "C";
-                    CruiserCheck++;
+                    board.Grid[r, c].ShipType = "C";
+                    ok++;
                 }
             }
-            if (CruiserCheck == 3)
+            if (ok == 3) return board;
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                return board;
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "C")
+                    board.Grid[r, c].ShipType = "";
             }
-            else
-            {
-                for (int i = 0; i < CruiserRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType == "C")
-                    {
-                        board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType = "";
-                    }
-                }
-                CruiserCheck = 0;
-                return board;
-            }
+            return board;
         }
+
         private BoardModel AttemptPlaceCruiserDownRight(BoardModel board, CellModel currentCell)
         {
-            int CruiserCheck = 0;
-            int[] CruiserRow = { 0, 0, 0 };
-            int[] CruiserCol = { 0, -1, -2 };
-            for (int i = 0; i < CruiserRow.Length; i++)
+            int ok = 0;
+            int[] dR = { 0, 0, 0 };
+            int[] dC = { 0, -1, -2 };
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                if (IsOnBoard(board, currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType == "")
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
                 {
-                    board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType = "C";
-                    CruiserCheck++;
+                    board.Grid[r, c].ShipType = "C";
+                    ok++;
                 }
             }
-            if (CruiserCheck == 3)
+            if (ok == 3) return board;
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                return board;
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "C")
+                    board.Grid[r, c].ShipType = "";
             }
-            else
-            {
-                for (int i = 0; i < CruiserRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType == "C")
-                    {
-                        board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType = "";
-                    }
-                }
-                CruiserCheck = 0;
-                return board;
-            }
+            return board;
         }
+
         private BoardModel AttemptPlaceCruiserDownLeft(BoardModel board, CellModel currentCell)
         {
-            int CruiserCheck = 0;
-            int[] CruiserRow = { 0, -1, -2 };
-            int[] CruiserCol = { 0, 0, 0 };
-            for (int i = 0; i < CruiserRow.Length; i++)
+            int ok = 0;
+            int[] dR = { 0, -1, -2 };
+            int[] dC = { 0, 0, 0 };
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                if (IsOnBoard(board, currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]) 
-                    && 
-                    board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType == "")
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (CanMarkCell(board, r, c))
                 {
-                    board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType = "C";
-                    CruiserCheck++;
+                    board.Grid[r, c].ShipType = "C";
+                    ok++;
                 }
             }
-            if (CruiserCheck == 3)
+            if (ok == 3) return board;
+
+            for (int i = 0; i < dR.Length; i++)
             {
-                return board;
+                int r = currentCell.Row + dR[i];
+                int c = currentCell.Collumn + dC[i];
+                if (IsOnBoard(board, r, c) && board.Grid[r, c].ShipType == "C")
+                    board.Grid[r, c].ShipType = "";
             }
-            else
-            {
-                for (int i = 0; i < CruiserRow.Length; i++)
-                {
-                    if (IsOnBoard(board, currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]) 
-                        && 
-                        board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType == "C")
-                    {
-                        board.Grid[currentCell.Row + CruiserRow[i], currentCell.Collumn + CruiserCol[i]].ShipType = "";
-                    }
-                }
-                CruiserCheck = 0;
-                return board;
-            }
+            return board;
         }
-
-
     }
 }
