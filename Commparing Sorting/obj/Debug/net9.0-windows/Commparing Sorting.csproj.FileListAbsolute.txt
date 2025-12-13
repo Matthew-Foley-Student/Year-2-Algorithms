@@ -1,0 +1,17 @@
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\bin\Debug\net9.0-windows\Commparing Sorting.exe
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\bin\Debug\net9.0-windows\Commparing Sorting.deps.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\bin\Debug\net9.0-windows\Commparing Sorting.runtimeconfig.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\bin\Debug\net9.0-windows\Commparing Sorting.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\bin\Debug\net9.0-windows\Commparing Sorting.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing_Sorting.Form1.resources
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing_Sorting.Properties.Resources.resources
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing Sorting.csproj.GenerateResource.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing Sorting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing Sorting.AssemblyInfoInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing Sorting.AssemblyInfo.cs
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing Sorting.csproj.CoreCompileInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing Sorting.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\refint\Commparing Sorting.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing Sorting.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\Commparing Sorting.genruntimeconfig.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 4\Commparing Sorting\obj\Debug\net9.0-windows\ref\Commparing Sorting.dll
