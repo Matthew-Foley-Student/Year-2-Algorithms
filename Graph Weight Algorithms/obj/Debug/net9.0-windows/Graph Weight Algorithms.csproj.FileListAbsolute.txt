@@ -1,0 +1,16 @@
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\bin\Debug\net9.0-windows\Graph Weight Algorithms.exe
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\bin\Debug\net9.0-windows\Graph Weight Algorithms.deps.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\bin\Debug\net9.0-windows\Graph Weight Algorithms.runtimeconfig.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\bin\Debug\net9.0-windows\Graph Weight Algorithms.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\bin\Debug\net9.0-windows\Graph Weight Algorithms.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\Graph_Weight_Algorithms.Form1.resources
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\Graph Weight Algorithms.csproj.GenerateResource.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\Graph Weight Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\Graph Weight Algorithms.AssemblyInfoInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\Graph Weight Algorithms.AssemblyInfo.cs
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\Graph Weight Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\Graph Weight Algorithms.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\refint\Graph Weight Algorithms.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\Graph Weight Algorithms.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\Graph Weight Algorithms.genruntimeconfig.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 5\Graph Weight Algorithms\obj\Debug\net9.0-windows\ref\Graph Weight Algorithms.dll
