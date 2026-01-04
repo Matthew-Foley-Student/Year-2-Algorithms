@@ -1,0 +1,11 @@
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\bin\Debug\net9.0\GreedyLibrary.deps.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\bin\Debug\net9.0\GreedyLibrary.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\bin\Debug\net9.0\GreedyLibrary.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\obj\Debug\net9.0\GreedyLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\obj\Debug\net9.0\GreedyLibrary.AssemblyInfoInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\obj\Debug\net9.0\GreedyLibrary.AssemblyInfo.cs
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\obj\Debug\net9.0\GreedyLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\obj\Debug\net9.0\GreedyLibrary.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\obj\Debug\net9.0\refint\GreedyLibrary.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\obj\Debug\net9.0\GreedyLibrary.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 6\GreedyLibrary\obj\Debug\net9.0\ref\GreedyLibrary.dll
