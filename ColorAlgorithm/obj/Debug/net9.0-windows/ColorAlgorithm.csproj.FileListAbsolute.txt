@@ -1,0 +1,16 @@
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\bin\Debug\net9.0-windows\ColorAlgorithm.exe
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\bin\Debug\net9.0-windows\ColorAlgorithm.deps.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\bin\Debug\net9.0-windows\ColorAlgorithm.runtimeconfig.json
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\bin\Debug\net9.0-windows\ColorAlgorithm.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\bin\Debug\net9.0-windows\ColorAlgorithm.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ColorAlgorithm.Form1.resources
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ColorAlgorithm.csproj.GenerateResource.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ColorAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ColorAlgorithm.AssemblyInfoInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ColorAlgorithm.AssemblyInfo.cs
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ColorAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ColorAlgorithm.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\refint\ColorAlgorithm.dll
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ColorAlgorithm.pdb
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ColorAlgorithm.genruntimeconfig.cache
+C:\Users\Jarvis\Desktop\School Year 2 Algorithms\Week 7\ColorAlgorithm\obj\Debug\net9.0-windows\ref\ColorAlgorithm.dll
